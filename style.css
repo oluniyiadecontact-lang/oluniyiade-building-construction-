@@ -553,4 +553,79 @@ a:hover {
 .main-nav a[aria-current="page"] {
     box-shadow: 0 4px 14px rgba(0, 87, 184, 0.15);
     transform: translateY(-2px);
+
 }
+
+/* --------------------------
+   MOBILE NAV FIX
+--------------------------- */
+@media (max-width: 768px) {
+  /* Ensure header is clean */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  /* Stack header content */
+  .head-flex {
+    flex-wrap: wrap;
+  }
+
+  /* Nav toggle visible */
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Mobile nav defaults */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--clr-bg);
+    border-top: 1px solid var(--clr-border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: left;
+  }
+
+  /* Open state */
+  .main-nav.open {
+    max-height: 500px; /* enough for all links */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--clr-text);
+  }
+
+  /* Fix "Get Quote" button */
+  .header-utils {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .header-utils .btn {
+    width: 100%;
+    text-align: center;
+  }
+    }
