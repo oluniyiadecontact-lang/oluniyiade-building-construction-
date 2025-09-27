@@ -199,4 +199,18 @@
     /* ===== YEAR IN FOOTER ===== */
     const yearSpan = $("#year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
 })();
+
+// Navbar toggle
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+navToggle.addEventListener('click', () => {
+  // Toggle active state
+  mainNav.classList.toggle('open');
+
+  // Optional: update aria-expanded for accessibility
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', !expanded);
+});
