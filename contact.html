@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flying Flourish Construction Company</title>
+    <meta name="description" content="Get in touch with Flying Flourish for your construction needs. Contact us for quotes, consultations, and project discussions across Nigeria.">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                <span class="logo-text">Flying Flourish</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop">
+                <source src="niyi.mp4" type="video/mp4">
+                <source src="niyi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+    <div class="hero-text">
+        <h1 class="hero-title">
+            <span class="contact-typed" id="contact-typed"></span>
+        </h1>
+        <p class="hero-subtitle">Let's Build Your Vision Together</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn btn-primary">Home</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact us</a>
+                </div>
+    </div>
+    <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="150">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="25">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>
+                        <span class="stat-label">Skilled Workers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2.5">0</span>
+                    <span class="stat-label">Million sqm Built</span>           
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="25">0</span>
+                    <span class="stat-label">States Covered</span>
+                </div>    
+    </div>
+    </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content" data-aos="fade-right">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="lead-text">Ready to start your construction project? Our team of experts is here to help you every step of the way. Contact us today for consultations, quotes, and project discussions.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-content">
+                                <h3>Office Address</h3>
+                                <p>123 Admiralty Way<br>Lekki Phase 1, Lagos<br>Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📞</div>
+                            <div class="method-content">
+                                <h3>Phone Numbers</h3>
+                                <p>Main Line: +234 1 234 5678<br>Mobile: +234 802 345 6789<br>Emergency: +234 803 456 7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">✉️</div>
+                            <div class="method-content">
+                                <h3>Email Addresses</h3>
+                                <p>General: info@flyingflourish.com<br>Projects: projects@flyingflourish.com<br>Careers: careers@flyingflourish.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🕒</div>
+                            <div class="method-content">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed (Emergency line available)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <div class="form-header">
+                        <h3>Request a Consultation</h3>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select Project Type</option>
+                                <option value="residential">Residential Construction</option>
+                                <option value="commercial">Commercial Construction</option>
+                                <option value="infrastructure">Infrastructure Development</option>
+                                <option value="renovation">Renovation/Remodeling</option>
+                                <option value="consultation">Construction Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Project Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-1m">Under ₦1 Million</option>
+                                <option value="1m-5m">₦1M - ₦5M</option>
+                                <option value="5m-20m">₦5M - ₦20M</option>
+                                <option value="20m-50m">₦20M - ₦50M</option>
+                                <option value="50m-100m">₦50M - ₦100M</option>
+                                <option value="over-100m">Over ₦100 Million</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="immediate">Immediate (Within 1 month)</option>
+                                <option value="short-term">Short-term (1-3 months)</option>
+                                <option value="medium-term">Medium-term (3-6 months)</option>
+                                <option value="long-term">Long-term (6+ months)</option>
+                                <option value="planning">Planning Phase</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Project Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, State">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Description *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please describe your project requirements, scope, and any specific needs or questions you may have..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for construction insights and updates
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="office-locations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Locations</h2>
+                <p class="section-subtitle">Strategically located offices across Nigeria to serve you better</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="location-card" data-aos="zoom-in">
+                    <div class="location-header">
+                        <h3>Lagos Head Office</h3>
+                        <span class="location-badge">Headquarters</span>
+                    </div>
+                    <div class="location-details">
+                        <p><strong>Address:</strong><br>123 Admiralty Way<br>Lekki Phase 1, Lagos</p>
+                        <p><strong>Phone:</strong><br>+234 1 234 5678</p>
+                        <p><strong>Email:</strong><br>lagos@flyingflourish.com</p>
+                        <p><strong>Hours:</strong><br>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="location-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="location-header">
+                        <h3>Abuja Office</h3>
+                        <span class="location-badge">Regional</span>
+                    </div>
+                    <div class="location-details">
+                        <p><strong>Address:</strong><br>45 Central Business District<br>Abuja, FCT</p>
+                        <p><strong>Phone:</strong><br>+234 9 876 5432</p>
+                        <p><strong>Email:</strong><br>abuja@flyingflourish.com</p>
+                        <p><strong>Hours:</strong><br>Mon-Fri: 8:00 AM - 5:30 PM<br>Sat: 10:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="location-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="location-header">
+                        <h3>Port Harcourt Office</h3>
+                        <span class="location-badge">Regional</span>
+                    </div>
+                    <div class="location-details">
+                        <p><strong>Address:</strong><br>78 Trans-Amadi Industrial Layout<br>Port Harcourt, Rivers State</p>
+                        <p><strong>Phone:</strong><br>+234 84 321 9876</p>
+                        <p><strong>Email:</strong><br>ph@flyingflourish.com</p>
+                        <p><strong>Hours:</strong><br>Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="location-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="location-header">
+                        <h3>Kano Office</h3>
+                        <span class="location-badge">Regional</span>
+                    </div>
+                    <div class="location-details">
+                        <p><strong>Address:</strong><br>12 Murtala Mohammed Way<br>Kano, Kano State</p>
+                        <p><strong>Phone:</strong><br>+234 64 987 6543</p>
+                        <p><strong>Email:</strong><br>kano@flyingflourish.com</p>
+                        <p><strong>Hours:</strong><br>Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency-contacts">
+        <div class="container">
+            <div class="emergency-grid">
+                <div class="emergency-content" data-aos="fade-right">
+                    <h2 class="section-title">Emergency Contacts</h2>
+                    <p class="lead-text">24/7 support for urgent construction needs and emergency situations</p>
+                    
+                    <div class="emergency-list">
+                        <div class="emergency-item">
+                            <div class="emergency-icon">🚨</div>
+                            <div class="emergency-details">
+                                <h3>Construction Emergency</h3>
+                                <p><strong>Phone:</strong> +234 803 456 7890</p>
+                                <p><strong>Email:</strong> emergency@flyingflourish.com</p>
+                                <p>Available 24/7 for construction site emergencies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="emergency-item">
+                            <div class="emergency-icon">🔧</div>
+                            <div class="emergency-details">
+                                <h3>Technical Support</h3>
+                                <p><strong>Phone:</strong> +234 802 345 6789</p>
+                                <p><strong>Email:</strong> support@flyingflourish.com</p>
+                                <p>Technical assistance for ongoing projects</p>
+                            </div>
+                        </div>
+                        
+                        <div class="emergency-item">
+                            <div class="emergency-icon">🏢</div>
+                            <div class="emergency-details">
+                                <h3>Security Issues</h3>
+                                <p><strong>Phone:</strong> +234 805 678 9012</p>
+                                <p><strong>Email:</strong> security@flyingflourish.com</p>
+                                <p>Site security and safety concerns</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-contact" data-aos="fade-left">
+                    <h3>Quick Contact Options</h3>
+                    
+                    <div class="quick-options">
+                        <a href="https://wa.me/2341234567890" class="quick-option whatsapp" target="_blank">
+                            <div class="option-icon">💬</div>
+                            <div class="option-content">
+                                <h4>WhatsApp Chat</h4>
+                                <p>Instant messaging for quick queries</p>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+2341234567890" class="quick-option call">
+                            <div class="option-icon">📞</div>
+                            <div class="option-content">
+                                <h4>Call Us</h4>
+                                <p>Direct phone consultation</p>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:info@flyingflourish.com" class="quick-option email">
+                            <div class="option-icon">✉️</div>
+                            <div class="option-content">
+                                <h4>Email Us</h4>
+                                <p>Detailed project discussions</p>
+                            </div>
+                        </a>
+                        
+                        <div class="quick-option video-call">
+                            <div class="option-icon">📹</div>
+                            <div class="option-content">
+                                <h4>Video Consultation</h4>
+                                <p>Schedule a virtual meeting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions about our services and processes</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>How do I get a quote for my construction project?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can request a quote by filling out our contact form, calling our main office, or sending an email with your project details. We'll schedule a consultation to discuss your requirements and provide a detailed quote within 48 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>What types of projects do you handle?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We handle a wide range of projects including residential homes, commercial buildings, infrastructure development, renovations, and consultations. No project is too big or too small for our experienced team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>How long does a typical project take?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on scope, complexity, and size. A residential home might take 6-12 months, while commercial projects can take 12-24 months. We provide detailed timelines during the consultation phase.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h3>Do you provide financing options?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we don't provide direct financing, we work with several financial institutions and can help connect you with appropriate financing options for your project. We also offer flexible payment plans.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
+                    <div class="faq-question">
+                        <h3>What areas do you serve?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We serve all major cities in Nigeria including Lagos, Abuja, Port Harcourt, Kano, and surrounding areas. We also undertake projects in other states across the country.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="faq-question">
+                        <h3>Are you licensed and insured?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we are fully licensed by COREN and other relevant regulatory bodies. We maintain comprehensive insurance coverage for all our projects and operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Don't wait any longer to bring your construction vision to life. Contact us today for a free consultation and let's discuss how we can make your project a success.</p>
+                <div class="cta-buttons">
+                    <a href="#contact-form" class="btn btn-primary">Get Free Quote</a>
+                    <a href="tel:+2341234567890" class="btn btn-secondary">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                        <span>Flying Flourish</span>
+                    </div>
+                    <p>Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Admiralty Way<br>Lekki Phase 1, Lagos<br>+234 1 234 5678<br>info@flyingflourish.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flying Flourish Construction Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2341234567890" class="whatsapp-float" target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

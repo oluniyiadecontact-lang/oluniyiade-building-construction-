@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://7kcwy45ghjihe.ok.kimi.link/sitemap.xml
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow crawling of important resources
+Allow: /resources/
+Allow: /style.css
+Allow: /script.js
+
+# Crawl delay for bots
+Crawl-delay: 1

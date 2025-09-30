@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Flying Flourish Construction Company</title>
+    <meta name="description" content="Explore Flying Flourish's portfolio of landmark construction projects across Nigeria, including residential, commercial, and infrastructure developments.">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                <span class="logo-text">Flying Flourish</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+        <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop">
+                <source src="niyi.mp4" type="video/mp4">
+                <source src="niyi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+    <div class="hero-text">
+        <h1 class="hero-title">
+            <span class="projects-typed" id="projects-typed"></span>
+        </h1>
+        <p class="hero-subtitle">Showcasing Excellence in Nigerian Construction</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn btn-primary">Home</a>
+                    <a href="projects.html" class="btn btn-secondary">Projects</a>
+                </div>
+    </div>
+    <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="150">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="25">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>
+                        <span class="stat-label">Skilled Workers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2.5">0</span>
+                    <span class="stat-label">Million sqm Built</span>           
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="25">0</span>
+                    <span class="stat-label">States Covered</span>
+                </div>    
+    </div>
+    </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="mixed-use">Mixed-Use</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Landmark developments that showcase our expertise and commitment to excellence</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card featured" data-category="commercial" data-aos="zoom-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop" alt="Victoria Island Tower">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Victoria Island Tower</h3>
+                                <p class="project-location">Victoria Island, Lagos</p>
+                                <p class="project-type">Commercial Office Building</p>
+                                <div class="project-stats">
+                                    <span class="stat">25 Stories</span>
+                                    <span class="stat">45,000 sqm</span>
+                                    <span class="stat">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Victoria Island Tower</h3>
+                        <p>A state-of-the-art commercial tower featuring modern office spaces, retail areas, and premium amenities. This landmark project showcases our expertise in high-rise construction and sustainable building practices.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>Green Building:</strong> LEED Gold certification achieved
+                            </div>
+                            <div class="highlight">
+                                <strong>Smart Technology:</strong> Integrated building management systems
+                            </div>
+                            <div class="highlight">
+                                <strong>Timeline:</strong> Completed 3 months ahead of schedule
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="victoria-tower">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="residential" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop" alt="Lekki Residential Estate">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Lekki Residential Estate</h3>
+                                <p class="project-location">Lekki, Lagos</p>
+                                <p class="project-type">Luxury Housing Development</p>
+                                <div class="project-stats">
+                                    <span class="stat">150 Units</span>
+                                    <span class="stat">25,000 sqm</span>
+                                    <span class="stat">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Lekki Residential Estate</h3>
+                        <p>A premier residential development featuring luxury homes, landscaped gardens, and world-class amenities. This project demonstrates our capability in creating sustainable communities.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>Community Design:</strong> Integrated living with recreational facilities
+                            </div>
+                            <div class="highlight">
+                                <strong>Sustainability:</strong> Solar power and rainwater harvesting systems
+                            </div>
+                            <div class="highlight">
+                                <strong>Safety:</strong> 24/7 security and smart home features
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="lekki-estate">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="infrastructure" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?w=1200&h=800&fit=crop" alt="Abuja Conference Center">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Abuja Conference Center</h3>
+                                <p class="project-location">Central Business District, Abuja</p>
+                                <p class="project-type">Government Infrastructure</p>
+                                <div class="project-stats">
+                                    <span class="stat">5,000 Capacity</span>
+                                    <span class="stat">12,000 sqm</span>
+                                    <span class="stat">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Abuja Conference Center</h3>
+                        <p>A world-class conference facility designed to host international events and diplomatic meetings, featuring advanced audiovisual systems and flexible meeting spaces.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>International Standards:</strong> Designed for diplomatic and corporate events
+                            </div>
+                            <div class="highlight">
+                                <strong>Technology:</strong> State-of-the-art audiovisual and communication systems
+                            </div>
+                            <div class="highlight">
+                                <strong>Flexibility:</strong> Configurable spaces for various event types
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="abj-conference">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="mixed-use" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop" alt="Port Harcourt Complex">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Port Harcourt Complex</h3>
+                                <p class="project-location">Port Harcourt, Rivers State</p>
+                                <p class="project-type">Mixed-Use Development</p>
+                                <div class="project-stats">
+                                    <span class="stat">3 Towers</span>
+                                    <span class="stat">30,000 sqm</span>
+                                    <span class="stat">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Port Harcourt Complex</h3>
+                        <p>A vibrant mixed-use development combining residential, commercial, and recreational spaces in a single integrated complex, setting new standards for urban living.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>Integrated Design:</strong> Residential, retail, and office spaces
+                            </div>
+                            <div class="highlight">
+                                <strong>Amenities:</strong> Shopping mall, restaurants, and entertainment
+                            </div>
+                            <div class="highlight">
+                                <strong>Connectivity:</strong> Strategic location with excellent transport links
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="ph-complex">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="commercial" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop" alt="Ikeja Shopping Mall">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Ikeja Shopping Mall</h3>
+                                <p class="project-location">Ikeja, Lagos</p>
+                                <p class="project-type">Retail Complex</p>
+                                <div class="project-stats">
+                                    <span class="stat">200 Stores</span>
+                                    <span class="stat">35,000 sqm</span>
+                                    <span class="stat">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Ikeja Shopping Mall</h3>
+                        <p>A modern retail destination featuring international and local brands, entertainment facilities, and dining options, serving as a major commercial hub in Lagos.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>Anchor Tenants:</strong> Major international retail brands
+                            </div>
+                            <div class="highlight">
+                                <strong>Entertainment:</strong> Cinema, food court, and family activities
+                            </div>
+                            <div class="highlight">
+                                <strong>Parking:</strong> Multi-level parking for 1,500 vehicles
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="ikeja-mall">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="residential" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=800&fit=crop" alt="Enugu Residential Towers">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Enugu Residential Towers</h3>
+                                <p class="project-location">Enugu, Enugu State</p>
+                                <p class="project-type">High-Rise Residential</p>
+                                <div class="project-stats">
+                                    <span class="stat">18 Floors</span>
+                                    <span class="stat">144 Apartments</span>
+                                    <span class="stat">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Enugu Residential Towers</h3>
+                        <p>Modern high-rise residential towers offering luxury apartments with panoramic views, premium amenities, and convenient urban living in the heart of Enugu.</p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <strong>Modern Amenities:</strong> Swimming pool, gym, and rooftop garden
+                            </div>
+                            <div class="highlight">
+                                <strong>Security:</strong> 24/7 security with CCTV surveillance
+                            </div>
+                            <div class="highlight">
+                                <strong>Location:</strong> Prime city center location with easy access
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline project-btn" data-project="enugu-towers">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories in Detail -->
+    <section class="project-categories-detail">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-tab="residential">Residential Projects</button>
+                <button class="tab-btn" data-tab="commercial">Commercial Projects</button>
+                <button class="tab-btn" data-tab="infrastructure">Infrastructure Projects</button>
+            </div>
+            
+            <div class="tab-content active" id="residential">
+                <div class="category-grid">
+                    <div class="category-item" data-aos="fade-up">
+                        <h3>Luxury Homes & Estates</h3>
+                        <p>Custom-designed luxury residences featuring premium finishes, modern amenities, and innovative architectural designs that reflect our clients' unique lifestyles and preferences.</p>
+                        <div class="category-features">
+                            <span>Custom Architecture</span>
+                            <span>Premium Finishes</span>
+                            <span>Smart Home Technology</span>
+                            <span>Landscaped Gardens</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Residential Estates</h3>
+                        <p>Planned residential communities offering a range of housing options with shared amenities, security, and infrastructure designed for modern family living.</p>
+                        <div class="category-features">
+                            <span>Gated Communities</span>
+                            <span>Recreational Facilities</span>
+                            <span>24/7 Security</span>
+                            <span>Infrastructure Services</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Apartment Complexes</h3>
+                        <p>High-quality apartment buildings and condominiums providing comfortable urban living with modern amenities and convenient access to city services.</p>
+                        <div class="category-features">
+                            <span>Modern Amenities</span>
+                            <span>Energy Efficiency</span>
+                            <span>Parking Facilities</span>
+                            <span>Management Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="commercial">
+                <div class="category-grid">
+                    <div class="category-item" data-aos="fade-up">
+                        <h3>Office Buildings</h3>
+                        <p>Modern office complexes designed for productivity and collaboration, featuring flexible workspaces, advanced technology infrastructure, and sustainable design principles.</p>
+                        <div class="category-features">
+                            <span>Flexible Layouts</span>
+                            <span>Smart Building Systems</span>
+                            <span>Green Certification</span>
+                            <span>Premium Locations</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Retail Centers</h3>
+                        <p>Shopping malls and retail complexes designed to attract foot traffic and provide optimal shopping experiences with modern amenities and convenient parking.</p>
+                        <div class="category-features">
+                            <span>Strategic Locations</span>
+                            <span>Anchor Tenants</span>
+                            <span>Entertainment Facilities</span>
+                            <span>Ample Parking</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Hospitality & Healthcare</h3>
+                        <p>Specialized facilities for hospitality and healthcare sectors, designed to meet industry-specific requirements while providing comfortable and functional spaces.</p>
+                        <div class="category-features">
+                            <span>Industry Compliance</span>
+                            <span>Specialized Equipment</span>
+                            <span>Patient/Guest Comfort</span>
+                            <span>Operational Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="infrastructure">
+                <div class="category-grid">
+                    <div class="category-item" data-aos="fade-up">
+                        <h3>Transportation Infrastructure</h3>
+                        <p>Roads, bridges, and transportation facilities that improve connectivity and support economic development across Nigeria's growing urban and rural areas.</p>
+                        <div class="category-features">
+                            <span>Durable Construction</span>
+                            <span>Traffic Management</span>
+                            <span>Safety Features</span>
+                            <span>Maintenance Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Utilities & Services</h3>
+                        <p>Essential infrastructure including water supply, power distribution, and telecommunications networks that support community development and economic growth.</p>
+                        <div class="category-features">
+                            <span>Reliable Service</span>
+                            <span>Scalable Design</span>
+                            <span>Environmental Protection</span>
+                            <span>Long-term Sustainability</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Public Facilities</h3>
+                        <p>Government buildings, educational institutions, and community facilities designed to serve public needs while reflecting institutional values and architectural excellence.</p>
+                        <div class="category-features">
+                            <span>Functional Design</span>
+                            <span>Accessibility Compliance</span>
+                            <span>Security Integration</span>
+                            <span>Community Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="project-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from satisfied clients on their project experiences</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"Flying Flourish delivered our Victoria Island office complex beyond our expectations. The attention to detail, quality of workmanship, and professional project management were exceptional throughout the entire construction process."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Dr. Adebayo Ogunlesi</strong>
+                        <span>CEO, Premium Holdings</span>
+                        <span class="project-reference">Victoria Island Tower Project</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p>"The Lekki Residential Estate project transformed our vision of modern community living into reality. The quality of construction and thoughtful planning have created a truly exceptional living environment for our residents."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Mrs. Ngozi Okonjo-Iweala</strong>
+                        <span>Real Estate Developer</span>
+                        <span class="project-reference">Lekki Residential Estate</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-content">
+                        <p>"The Abuja Conference Center project was completed with remarkable efficiency and quality. Flying Flourish's expertise in handling complex government infrastructure projects is truly impressive."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Alhaji Aliko Dangote</strong>
+                        <span>Government Project Director</span>
+                        <span class="project-reference">Abuja Conference Center</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="awards-recognition">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <p class="section-subtitle">Industry recognition for our commitment to excellence in construction</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-card" data-aos="zoom-in">
+                    <div class="award-icon">🏆</div>
+                    <h3>Construction Excellence Award</h3>
+                    <p>Best Commercial Project 2023</p>
+                    <span class="award-year">Victoria Island Tower</span>
+                </div>
+                
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="award-icon">⭐</div>
+                    <h3>Green Building Award</h3>
+                    <p>Most Sustainable Residential Development</p>
+                    <span class="award-year">Lekki Residential Estate</span>
+                </div>
+                
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="award-icon">🎖️</div>
+                    <h3>Safety Excellence Award</h3>
+                    <p>Zero Accidents Achievement</p>
+                    <span class="award-year">Company-wide Recognition</span>
+                </div>
+                
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="award-icon">🌟</div>
+                    <h3>Innovation in Construction</h3>
+                    <p>Best Use of Technology</p>
+                    <span class="award-year">BIM Implementation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Join our satisfied clients and let Flying Flourish bring your construction vision to life with the same excellence and attention to detail showcased in our portfolio.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Project Quote</a>
+                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                        <span>Flying Flourish</span>
+                    </div>
+                    <p>Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Admiralty Way<br>Lekki Phase 1, Lagos<br>+234 1 234 5678<br>info@flyingflourish.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flying Flourish Construction Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2341234567890" class="whatsapp-float" target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

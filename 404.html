@@ -2,110 +2,308 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page Not Found – Flying Flourish</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Flying Flourish Construction Company</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Visit Flying Flourish for professional construction services in Nigeria.">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional 404 specific styles */
+        .error-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .error-number {
+            font-family: var(--font-display);
+            font-size: 120px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .error-title {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .error-description {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .error-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .construction-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><rect x="0" y="150" width="1200" height="50" fill="%23ffffff" opacity="0.1"/><rect x="100" y="100" width="100" height="100" fill="%23ffffff" opacity="0.1"/><rect x="300" y="80" width="80" height="120" fill="%23ffffff" opacity="0.1"/><rect x="500" y="120" width="120" height="80" fill="%23ffffff" opacity="0.1"/><rect x="700" y="90" width="90" height="110" fill="%23ffffff" opacity="0.1"/><rect x="900" y="110" width="110" height="90" fill="%23ffffff" opacity="0.1"/></svg>') repeat-x;
+            animation: slide 20s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-1200px); }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .btn-white:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-white:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-
-    <!-- WHATSAPP FLOAT -->
-    <a class="whatsapp-float" href="https://wa.me/2348078053533?text=Hello%20Flying%20Flourish%2C%20I%20hit%20a%20broken%20link" aria-label="Chat on WhatsApp">
-        <span class="whatsapp-icon"></span>
-    </a>
-
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container head-flex">
-            <!-- Logo (Home) -->
-            <a class="logo" aria-label="Flying Flourish home">
-                <span class="roof"></span>
-                <span class="brand">Flying Flourish</span>
-            </a>
-
-            <nav class="main-nav" aria-label="Primary">
-                <button class="nav-toggle" aria-expanded="false"><span></span></button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                <span class="logo-text">Flying Flourish</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-            </nav>
-
-            <div class="header-utils">
-                <button class="dark-mode-toggle" aria-label="Toggle dark mode"></button>
-                <a class="btn btn--primary" href="contact.html">Get Quote</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- MAIN -->
-    <main id="main" class="container">
-        <section class="error-box">
-            <h1>404 – Page Not Found</h1>
-            <p>The page you’re looking for might have been moved, deleted or you typed the wrong URL.</p>
-
-            <div class="btn-group">
-                <a class="btn btn--primary" href="index.htmml">Go Home</a>
-                <a class="btn btn--outline" href="contact.html">Contact Us</a>
-            </div>
-
-            <h2>Popular Pages</h2>
-            <ul class="error-links">
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="projects.html">Project Portfolio</a></li>
-                <li><a href="blog-30-land-checklist.html">Free Land Checklist</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div>
-                <h3>Flying Flourish</h3>
-                <p>BUILDING EXCELLENCE WITH INTEGRITY</p>
-                <p>Stress-free construction consulting for Nigerians at home and abroad.</p>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                    <li><a href="sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul class="contact-list">
-                    <li><a href="https://wa.me/2348078053533">WhatsApp: +234 807 805 3533</a></li>
-                    <li><a href="tel:+2348078063583">Call: +234 807 806 3583</a></li>
-                    <li><a href="mailto:oluniyiade@gmail.com">oluniyiade@gmail.com</a></li>
-                </ul>
+    <!-- 404 Error Hero Section -->
+    <section class="error-hero">
+        <div class="floating-elements">
+            <div class="floating-element">🏗️</div>
+            <div class="floating-element">⚙️</div>
+            <div class="floating-element">🔨</div>
+        </div>
+        
+        <div class="construction-animation"></div>
+        
+        <div class="error-content">
+            <div class="error-number">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-description">
+                Oops! The page you're looking for seems to have been misplaced in our construction plans. 
+                Don't worry, we'll help you get back on track.
+            </p>
+            <div class="error-buttons">
+                <a href="index.html" class="btn btn-white">Return Home</a>
+                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Flying Flourish. All rights reserved.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="resources/company-logo.png" alt="Flying Flourish Logo">
+                        <span>Flying Flourish</span>
+                    </div>
+                    <p>Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Admiralty Way<br>Lekki Phase 1, Lagos<br>+234 1 234 5678<br>info@flyingflourish.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flying Flourish Construction Company. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2341234567890" class="whatsapp-float" target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
 
+    <script src="script.js"></script>
+    <script>
+        // Additional 404 page specific animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate 404 elements
+            anime.timeline({
+                easing: 'easeOutExpo'
+            })
+            .add({
+                targets: '.error-number',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                duration: 1000,
+                delay: 500
+            })
+            .add({
+                targets: '.error-title',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 800,
+                delay: 200
+            }, '-=600')
+            .add({
+                targets: '.error-description',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 800,
+                delay: 300
+            }, '-=400')
+            .add({
+                targets: '.error-buttons',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 800,
+                delay: 400
+            }, '-=200');
+            
+            // Add some interactive hover effects
+            const errorContent = document.querySelector('.error-content');
+            errorContent.addEventListener('mousemove', function(e) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                const floatingElements = document.querySelectorAll('.floating-element');
+                floatingElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.5;
+                    element.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+                });
+            });
+        });
+    </script>
+</body>
 </html>
