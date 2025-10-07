@@ -1026,27 +1026,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(c => counterObserver.observe(c));
 
-  /* 2. 3-D tilt on mouse-move for glass cards */
-  const cards = document.querySelectorAll('.service-card, .specialized-card');
-
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const rotateX = (y / rect.height - 0.5) * -20; // -10deg to +10deg
-      const rotateY = (x / rect.width - 0.5) * 20;   // -10deg to +10deg
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-    });
-  });
-});
-
 //  PROJECTS-PAGE  JS
 document.addEventListener('DOMContentLoaded', () => {
   /* 1.  Filter buttons  */
@@ -1278,3 +1257,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
