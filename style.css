@@ -2506,3 +2506,44 @@ border-color: var(--primary-light, #64b5f6);
   z-index: 1;           /* any positive value is enough */
   transform: translateZ(0); /* forces a new layer (hardware accel) */
 }
+
+.project-card,
+.category-item,
+.testimonial-card,
+.award-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.category-item:hover,
+.testimonial-card:hover,
+.award-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card,
+.article-card,
+.testimonial-card,
+.award-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover,
+.article-card:hover,
+.testimonial-card:hover,
+.award-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.terms-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terms-section:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
