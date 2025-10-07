@@ -1066,21 +1066,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 3.  3-D tilt on mouse-move  */
+  // SIMPLE HOVER EFFECT
+document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.project-card, .category-item, .testimonial-card, .award-card');
+
   cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const rotateX = (y / rect.height - 0.5) * -20;
-      const rotateY = (x / rect.width - 0.5) * 20;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      card.style.transform = 'translateY(-10px) scale(1.03)';
+      card.style.boxShadow = '0 12px 25px rgba(0, 0, 0, 0.15)';
     });
+
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      card.style.transform = 'translateY(0) scale(1)';
+      card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
     });
   });
+});
+
 
   /* 4.  AOS (Animate-On-Scroll)  --  already init'd globally  */
 
@@ -1146,21 +1149,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 2.  3-D tilt on mouse-move  */
+  // SIMPLE HOVER EFFECT FOR FEATURED + ARTICLE + TESTIMONIAL + AWARD CARDS
+document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.featured-card, .article-card, .testimonial-card, .award-card');
+
   cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const rotateX = (y / rect.height - 0.5) * -20;
-      const rotateY = (x / rect.width - 0.5) * 20;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      card.style.transform = 'translateY(-10px) scale(1.03)';
+      card.style.boxShadow = '0 12px 25px rgba(0, 0, 0, 0.15)';
     });
+
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      card.style.transform = 'translateY(0) scale(1)';
+      card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
     });
   });
+});
 
   /* 3.  "Read More" link smooth scroll (placeholder)  */
   document.querySelectorAll('.read-more').forEach(link => {
@@ -1241,21 +1246,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 2.  3-D tilt on mouse-move for glass cards  */
+  // SIMPLE HOVER EFFECT FOR GLASS CARDS
+document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.terms-section');
+
   sections.forEach(sec => {
-    sec.addEventListener('mousemove', (e) => {
-      const rect = sec.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const rotateX = (y / rect.height - 0.5) * -10;
-      const rotateY = (x / rect.width - 0.5) * 10;
-      sec.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    sec.addEventListener('mouseenter', () => {
+      sec.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      sec.style.transform = 'translateY(-8px) scale(1.02)';
+      sec.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
     });
 
     sec.addEventListener('mouseleave', () => {
-      sec.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      sec.style.transform = 'translateY(0) scale(1)';
+      sec.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
     });
   });
 });
+
 
