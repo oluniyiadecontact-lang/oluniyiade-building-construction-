@@ -1025,6 +1025,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   counters.forEach(c => counterObserver.observe(c));
+}); // ✅ properly closed
 
 //  PROJECTS-PAGE  JS
 document.addEventListener('DOMContentLoaded', () => {
