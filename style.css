@@ -2458,3 +2458,27 @@ color: var(--text-light, #e6e9f0);
 background: rgba(0, 123, 255, 0.08);
 border-color: var(--primary-light, #64b5f6);
 }
+.whatsapp-logo {
+  width: 60px;
+  height: 60px;
+  animation: spiral 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Spiral animation: rotate + scale */
+@keyframes spiral {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.whatsapp-logo:hover {
+  animation-play-state: paused;
+}
+
+
