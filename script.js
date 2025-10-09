@@ -1246,22 +1246,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // SIMPLE HOVER EFFECT FOR GLASS CARDS
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.terms-section');
+   // SIMPLE HOVER EFFECT
+  const cards = document.querySelectorAll('.project-card, .category-item, .testimonial-card, .award-card');
 
-  sections.forEach(sec => {
-    sec.addEventListener('mouseenter', () => {
-      sec.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-      sec.style.transform = 'translateY(-8px) scale(1.02)';
-      sec.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'scale(1.03)';
+      card.style.transition = 'transform 0.3s ease';
     });
 
-    sec.addEventListener('mouseleave', () => {
-      sec.style.transform = 'translateY(0) scale(1)';
-      sec.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1)';
     });
   });
 });
+
 
 
