@@ -2632,44 +2632,21 @@ body.dark-mode .checkbox-label {
     z-index: -1;         /* stays behind the overlay & text */
 }
 
-/* ----------------------------------------------------------
-   BLOG-PAGE  GLASS  FIX  (Newsletter + Footer)
-   ---------------------------------------------------------- */
-
-/* 1.  force glass on Newsletter section (both modes) */
-.newsletter {
-    background: var(--glass-bg, rgba(255,255,255,.06));
-    border-top: 1px solid var(--glass-border, rgba(255,255,255,.12));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: var(--text-light);
+/* ---------- BLOG : force newsletter & footer full-width ---------- */
+.blog-articles ~ .newsletter,          /* newsletter that comes right after articles */
+.blog-articles ~ .newsletter ~ .footer /* footer that follows it */
+{
+    width: 100vw;                      /* break out of container */
+    margin-left: calc(-50vw + 50%);   /* centre it */
+    background: var(--bg-light);       /* same background as other pages */
+    border-radius: 0;                  /* kill card radius */
+    box-shadow: none;                  /* kill card shadow */
+    backdrop-filter: none;             /* kill glass blur */
 }
 
-.newsletter-content h2,
-.newsletter-content p {
-    color: var(--text-light);
+/* dark-mode colours */
+[data-theme="dark"] .blog-articles ~ .newsletter,
+[data-theme="dark"] .blog-articles ~ .newsletter ~ .footer
+{
+    background: var(--bg-dark);
 }
-
-/* 2.  footer already has glass, just ensure dark-mode colours */
-[data-theme="dark"] .footer {
-    background: var(--glass-bg-dark, rgba(0,0,0,.45));
-    border-top: 1px solid var(--glass-border-dark, rgba(255,255,255,.1));
-}
-
-[data-theme="dark"] .footer-section h3,
-[data-theme="dark"] .footer-section p,
-[data-theme="dark"] .footer-section a {
-    color: var(--text-dark, #e6e6e6);
-}
-
-/* 3.  newsletter form fields – visible in both modes */
-.newsletter-form input {
-    background: var(--glass-bg, rgba(255,255,255,.07));
-    border: 1px solid var(--glass-border, rgba(255,255,255,.15));
-    color: var(--text-light);
-}
-
-.newsletter-form input::placeholder {
-    color: var(--concrete-gray);
-}
-
