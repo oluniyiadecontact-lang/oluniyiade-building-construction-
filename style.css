@@ -2620,4 +2620,64 @@ body.dark-mode .checkbox-label {
   color: #eee; /* Light text for dark backgrounds */
 }
 
+/* ------------------------------------------------------------------
+   FLYING-FLOURISH  PALETTE  OVERRIDE  (logo-aware)
+   ------------------------------------------------------------------ */
+/* 1.  logo colours (sampled from fly.jpg)
+      dark-green  #085c2b  (leaves)
+      gold        #d4840c  (“FLOURISH” text)
+      charcoal    #1a1a1a  (near-black)
+      off-white   #fafafa  (paper background)
+*/
+:root {
+  /* ------ primary accents  ------ */
+  --primary-color: #085c2b;          /* replaces #2C2C2C */
+  --secondary-color: #d4840c;        /* replaces #4682B4 */
+  --accent-color: #d4840c;           /* replaces #008751 */
+
+  /* ------ neutrals  ------ */
+  --earth-tone: #6b4f37;             /* muted brown */
+  --concrete-gray: #a9a9a9;          /* unchanged */
+  --bg-light: #fafafa;               /* paper white */
+  --text-light: #1a1a1a;             /* charcoal text */
+
+  /* ------ glassmorphism light  ------ */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(8, 92, 43, 0.18);
+}
+
+/* 2.  DARK-MODE  swap  (keeps same palette, inverted) */
+[data-theme="dark"] {
+  --bg-dark: #0f0f0f;
+  --text-dark: #e6e6e6;
+
+  /* glass dark  */
+  --glass-bg: rgba(0, 0, 0, 0.45);
+  --glass-border: rgba(212, 132, 12, 0.25);
+
+  /* button / link tints  */
+  --primary-color: #d4840c;          /* gold pops on dark */
+  --secondary-color: #085c2b;        /* green secondary */
+  --accent-color: #d4840c;
+}
+
+/* 3.  tiny polish  */
+.btn-primary { background: var(--accent-color); }
+.btn-primary:hover { background: #b36f0a; }   /* slightly darker gold */
+
+.nav-link::after,
+.splide__pagination__page.is-active,
+.stat-number { background: var(--accent-color); }
+
+/* 4.  ensure smooth transition  */
+body,
+.navbar,
+.btn,
+.nav-link::after,
+.glass-card,
+.service-card,
+.project-card,
+.testimonial-card { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+
+
 
