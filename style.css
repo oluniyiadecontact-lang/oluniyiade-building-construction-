@@ -2632,21 +2632,19 @@ body.dark-mode .checkbox-label {
     z-index: -1;         /* stays behind the overlay & text */
 }
 
-/* ---------- BLOG : force newsletter & footer full-width ---------- */
-.blog-articles ~ .newsletter,          /* newsletter that comes right after articles */
-.blog-articles ~ .newsletter ~ .footer /* footer that follows it */
-{
-    width: 100vw;                      /* break out of container */
-    margin-left: calc(-50vw + 50%);   /* centre it */
-    background: var(--bg-light);       /* same background as other pages */
-    border-radius: 0;                  /* kill card radius */
-    box-shadow: none;                  /* kill card shadow */
-    backdrop-filter: none;             /* kill glass blur */
+/* ---------- BLOG : force full-width newsletter + footer ---------- */
+.blog-articles + .newsletter,
+.blog-articles + .newsletter + .footer {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: var(--bg-light);   /* light theme */
+}
+[data-theme="dark"] .blog-articles + .newsletter,
+[data-theme="dark"] .blog-articles + .newsletter + .footer {
+    background: var(--bg-dark);    /* dark theme */
 }
 
-/* dark-mode colours */
-[data-theme="dark"] .blog-articles ~ .newsletter,
-[data-theme="dark"] .blog-articles ~ .newsletter ~ .footer
-{
-    background: var(--bg-dark);
-}
