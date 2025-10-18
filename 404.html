@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Flying Flourish Construction Company</title>
+    <meta name="description" content="Sorry, the page you're looking for doesn't exist. Return to Flying Flourish's homepage or contact us for assistance.">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-section {
+            padding: 120px 0 80px;
+            background: var(--surface);
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .error-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .error-code {
+            font-family: var(--font-display);
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .construction-animation {
+            width: 200px;
+            height: 200px;
+            margin: 32px auto;
+            position: relative;
+        }
+        
+        .construction-icon {
+            font-size: 8rem;
+            color: var(--secondary-color);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .error-actions .btn {
+                width: 200px;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="fly.jpg" alt="Flying Flourish Logo">
+                <span class="logo-text">Flying Flourish</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-hidden="true" style="display: none;">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Error Section -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <div class="construction-animation">
+                    <div class="construction-icon">🏗️</div>
+                </div>
+                
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page Not Found</h1>
+                <p class="error-message">
+                    Oops! It looks like the page you're looking for doesn't exist. <br>
+                    Don't worry, we're still building amazing things for you.
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="fly.jpg" alt="Flying Flourish Logo">
+                        <span>Flying Flourish</span>
+                    </div>
+                    <p>Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <p>123 Lekki phase 1,<br>
+                        Lagos island,<br>
+                        Lagos</p>
+                        <p>
+                            <a href="tel:+2348078053533" style="color: var(--text-secondary); text-decoration: none;">+2348078053533</a>, 
+                            <a href="tel:+234703071248" style="color: var(--text-secondary); text-decoration: none;">+234703071248</a>
+                        </p>
+                        <p>
+                            <a href="mailto:info@flyingflourish.com" style="color: var(--text-secondary); text-decoration: none;">info@flyingflourish.com</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flying Flourish Construction Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
