@@ -5,6 +5,51 @@
     box-sizing: border-box;
 }
 
+/* Prevent horizontal scroll on all devices */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure images don't cause horizontal scroll */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
 /* Brand Color Variables */
 :root {
     /* Brand Colors from Logo */
@@ -939,6 +984,12 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Mobile viewport fixes */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -1039,6 +1090,12 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Extra small devices fixes */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
     .container {
         padding: 0 15px;
     }
@@ -1223,6 +1280,187 @@ section {
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 80px 0;
+    background: var(--surface);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--glass-bg);
+}
+
+.faq-question:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer[aria-hidden="false"] {
+    max-height: 300px;
+    padding: 0 20px 20px;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1rem;
+        padding: 16px;
+    }
+    
+    .faq-answer[aria-hidden="false"] {
+        padding: 0 16px 16px;
+    }
+}
+}
+
+/* Mobile-specific fixes for horizontal scroll prevention */
+@media (max-width: 768px) {
+    /* Fix for hero video container causing horizontal scroll */
+    .hero-video-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    /* Ensure service cards don't cause overflow */
+    .service-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .service-card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Fix project cards grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Fix about grid */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    
+    .about-card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Fix footer content */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    /* Fix form group */
+    .form-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .form-group input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    /* Ensure all containers use full width */
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    /* Fix hero content spacing */
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+    
+    /* Fix button sizing */
+    .btn {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+    
+    /* Fix card padding */
+    .service-card,
+    .project-card,
+    .about-card {
+        padding: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+};
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(1, 139, 211, 0.3);
     background: var(--surface);
@@ -1256,4 +1494,3 @@ section {
 .faq-answer > * { min-height: 0; }
 
 .faq-item.active .faq-answer { grid-template-rows: 1fr; }
-
