@@ -577,3 +577,32 @@ const handleResize = debounce(function() {
 }, 250);
 
 window.addEventListener('resize', handleResize);
+
+// FAQ Accordion functionality
+function initFAQAccordion() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const answer = document.getElementById(this.getAttribute('aria-controls'));
+            
+            if (answer) {
+                // Close all other FAQ items
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== this) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                        const otherAnswer = document.getElementById(otherQuestion.getAttribute('aria-controls'));
+                        if (otherAnswer) {
+                            otherAnswer.setAttribute('aria-hidden', 'true');
+                        }
+                    }
+                });
+                
+                // Toggle current FAQ item
+                this.setAttribute('aria-expanded', !isExpanded);
+                answer.setAttribute('aria-hidden', isExpanded);
+            }
+        });
+    });
+}
