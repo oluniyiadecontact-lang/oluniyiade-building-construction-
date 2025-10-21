@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Flying Flourish Construction Company</title>
-    <meta name="description" content="Stay updated with the latest construction trends, tips, and insights from Flying Flourish's expert team. Industry news, project updates, and construction best practices.">
+    <meta name="description" content="Stay updated with the latest construction insights, real estate trends, and industry news from Flying Flourish's expert team.">
     
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .blog-section {
-            padding: 80px 0;
+            padding: 120px 0 80px;
             background: var(--surface);
         }
         
@@ -38,8 +38,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
             border: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
         }
         
         .blog-card:hover {
@@ -48,76 +46,51 @@
         }
         
         .blog-image {
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .blog-image img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .blog-card:hover .blog-image img {
-            transform: scale(1.05);
-        }
-        
-        .blog-category {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: var(--primary-color);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
         }
         
         .blog-content {
             padding: 24px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
         }
         
-        .blog-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        .blog-meta {
+            display: flex;
+            gap: 16px;
             margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
         
         .blog-title {
             font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-color);
+            font-size: 1.5rem;
             margin-bottom: 12px;
-            line-height: 1.3;
+            color: var(--primary-color);
         }
         
         .blog-excerpt {
             color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: 20px;
-            flex-grow: 1;
+            margin-bottom: 16px;
         }
         
         .blog-link {
+            display: inline-block;
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
             transition: var(--transition);
         }
         
         .blog-link:hover {
             color: var(--secondary-color);
-            transform: translateX(5px);
+        }
+        
+        .blog-link::after {
+            content: ' →';
+            margin-left: 4px;
         }
     </style>
 <base target="_blank">
@@ -158,7 +131,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline class="hero-video" poster="image.jpg" style="object-fit: cover; width: 100%; height: 100%;" aria-label="Construction site background video">
+            <video autoplay muted loop playsinline class="hero-video" poster="image1.jpg" aria-label="Construction site background video">
                 <source src="groundvideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -168,210 +141,102 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="blog-typed" id="blog-typed"></span>
+                    <span>Construction Insights & News</span>
                 </h1>
-                <p class="hero-subtitle">Construction Insights, Tips & Industry Updates</p>
-                <div class="hero-buttons">
-                    <a href="index.html" class="btn btn-primary">Home</a>
-                    <a href="blog.html" class="btn btn-secondary">Blog</a>
-                </div>
+                <p class="hero-subtitle">Stay updated with the latest trends in construction and real estate</p>
             </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-    <span class="stat-number" data-count="10">0</span>
-    <span class="stat-label">Projects Completed</span>
-</div>
-<div class="stat-item">
-    <span class="stat-number" data-count="10">0</span>
-    <span class="stat-label">Years Experience</span>
-</div>
-
-                <div class="stat-item">
-                    <span class="stat-number" data-count="98">0</span><span class="percent">%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- Blog Section -->
-    <section class="blog-section" id="main-content">
+    <section class="blog-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Construction Blog</h2>
-                <p class="section-subtitle">Stay informed with the latest construction trends, tips, and insights from our expert team.</p>
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Expert insights on construction, real estate, and building trends in Nigeria</p>
             </div>
             
             <div class="blog-grid">
-                <!-- Blog Post 1 -->
-                <article class="blog-card" data-aos="fade-up">
-                    <div class="blog-image">
-                        <img src="image4.jpg" alt="Modern construction techniques and materials" loading="lazy">
-                        <div class="blog-category">Construction Tips</div>
-                    </div>
+                <article class="blog-card">
+                    <img src="image1.jpg" alt="Real estate investment in Nigeria" class="blog-image" loading="lazy">
                     <div class="blog-content">
-                        <div class="blog-date">October 15, 2024</div>
-                        <h3 class="blog-title">5 Modern Construction Techniques Transforming Nigerian Architecture</h3>
-                        <p class="blog-excerpt">Discover the latest construction methods that are revolutionizing building practices in Nigeria, from sustainable materials to advanced structural systems that ensure durability and efficiency.</p>
-                        <a href="blog-detail-1.html" class="blog-link">Read More →</a>
+                        <div class="blog-meta">
+                            <span>October 21, 2025</span>
+                            <span>Real Estate</span>
+                        </div>
+                        <h3 class="blog-title">Types of Real Estate Investing in Nigeria</h3>
+                        <p class="blog-excerpt">Discover the various real estate investment opportunities available in Nigeria, from residential properties to commercial developments and the benefits of each investment type.</p>
+                        <a href="blog/real-estate-investing-nigeria.html" class="blog-link">Read More</a>
                     </div>
                 </article>
-
-                <!-- Blog Post 2 -->
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-image">
-                        <img src="safe.jpg" alt="Construction safety practices on site" loading="lazy">
-                        <div class="blog-category">Safety</div>
-                    </div>
+                
+                <article class="blog-card">
+                    <img src="Commercial.jpg" alt="Construction materials" class="blog-image" loading="lazy">
                     <div class="blog-content">
-                        <div class="blog-date">October 5, 2024</div>
-                        <h3 class="blog-title">Construction Site Safety: Best Practices for Nigerian Projects</h3>
-                        <p class="blog-excerpt">Essential safety protocols and best practices that ensure zero accidents on construction sites, protecting workers and maintaining project timelines.</p>
-                        <a href="blog-detail-2.html" class="blog-link">Read More →</a>
+                        <div class="blog-meta">
+                            <span>October 15, 2025</span>
+                            <span>Construction</span>
+                        </div>
+                        <h3 class="blog-title">Sustainable Building Materials in Nigeria</h3>
+                        <p class="blog-excerpt">Learn about eco-friendly building materials available in Nigeria and how they can reduce construction costs while protecting the environment.</p>
+                        <a href="blog/sustainable-materials.html" class="blog-link">Read More</a>
                     </div>
                 </article>
-
-                <!-- Blog Post 3 -->
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-image">
-                        <img src="cost.webp" alt="Cost-effective construction materials" loading="lazy">
-                        <div class="blog-category">Cost Management</div>
-                    </div>
+                
+                <article class="blog-card">
+                    <img src="infrastructure.jpg" alt="Building regulations" class="blog-image" loading="lazy">
                     <div class="blog-content">
-                        <div class="blog-date">September 28, 2024</div>
-                        <h3 class="blog-title">How to Reduce Construction Costs Without Compromising Quality</h3>
-                        <p class="blog-excerpt">Smart strategies for managing construction budgets effectively while maintaining high standards of quality and durability in your building projects.</p>
-                        <a href="blog-detail-3.html" class="blog-link">Read More →</a>
+                        <div class="blog-meta">
+                            <span>October 10, 2025</span>
+                            <span>Regulations</span>
+                        </div>
+                        <h3 class="blog-title">Understanding Nigerian Building Codes</h3>
+                        <p class="blog-excerpt">A comprehensive guide to Nigerian building regulations and how to ensure your construction project complies with all legal requirements.</p>
+                        <a href="blog/building-codes.html" class="blog-link">Read More</a>
                     </div>
                 </article>
-
-                <!-- Blog Post 4 -->
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="blog-image">
-                        <img src="image7.jpg" alt="Building foundations and structural integrity" loading="lazy">
-                        <div class="blog-category">Technical</div>
-                    </div>
+                
+                <article class="blog-card">
+                    <img src="image5.jpg" alt="Home renovation" class="blog-image" loading="lazy">
                     <div class="blog-content">
-                        <div class="blog-date">September 22, 2024</div>
-                        <h3 class="blog-title">Understanding Foundation Types for Nigerian Soil Conditions</h3>
-                        <p class="blog-excerpt">A comprehensive guide to choosing the right foundation type for different soil conditions across Nigeria, ensuring structural integrity and longevity.</p>
-                        <a href="blog-detail-4.html" class="blog-link">Read More →</a>
+                        <div class="blog-meta">
+                            <span>October 5, 2025</span>
+                            <span>Tips</span>
+                        </div>
+                        <h3 class="blog-title">Home Renovation: When to DIY vs Hire Professionals</h3>
+                        <p class="blog-excerpt">Expert advice on determining which home improvement projects you can handle yourself and when it's essential to bring in professional contractors.</p>
+                        <a href="blog/renovation-tips.html" class="blog-link">Read More</a>
                     </div>
                 </article>
-
-                <!-- Blog Post 5 -->
-                <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="blog-image">
-                        <img src="roof.jpg" alt="Roofing solutions for Nigerian climate" loading="lazy">
-                        <div class="blog-category">Building Materials</div>
-                    </div>
+                
+                <article class="blog-card">
+                    <img src="image7.jpg" alt="Construction timeline" class="blog-image" loading="lazy">
                     <div class="blog-content">
-                        <div class="blog-date">September 15, 2024</div>
-                        <h3 class="blog-title">Choosing the Right Roofing Solution for Nigerian Climate</h3>
-                        <p class="blog-excerpt">Expert advice on selecting roofing materials that can withstand Nigeria's diverse climate conditions while providing energy efficiency and aesthetic appeal.</p>
-                        <a href="blog-detail-5.html" class="blog-link">Read More →</a>
+                        <div class="blog-meta">
+                            <span>September 28, 2025</span>
+                            <span>Planning</span>
+                        </div>
+                        <h3 class="blog-title">Construction Timeline: What to Expect</h3>
+                        <p class="blog-excerpt">Understanding the typical phases of construction projects in Nigeria and how to plan for each stage of your building project.</p>
+                        <a href="blog/construction-timeline.html" class="blog-link">Read More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="img3.jpg" alt="Interior design trends" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>September 20, 2025</span>
+                            <span>Design</span>
+                        </div>
+                        <h3 class="blog-title">2025 Interior Design Trends for Nigerian Homes</h3>
+                        <p class="blog-excerpt">Explore the latest interior design trends that are perfect for Nigerian homes, from color schemes to furniture choices and space optimization.</p>
+                        <a href="blog/interior-trends.html" class="blog-link">Read More</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
-
-     <!-- Newsletter Section -->
-<section class="newsletter">
-  <div class="container">
-    <div class="newsletter-content">
-      <h2>Stay Updated with Our Projects</h2>
-      <p>Subscribe to our newsletter for the latest construction insights and project updates.</p>
-
-      <form
-        id="newsletter-form"
-        class="newsletter-form"
-        action="https://gmail.us7.list-manage.com/subscribe/post?u=4bd4b67aa76e9ad8b4e01742f&amp;id=3c8fd9acba&amp;f_id=0044afe0f0"
-        method="POST"
-        target="_self"
-        novalidate
-      >
-        <div class="form-group">
-          <input
-            type="email"
-            name="EMAIL"
-            id="mce-EMAIL"
-            placeholder="Enter your email address"
-            required
-            aria-label="Email address for newsletter subscription"
-          />
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </div>
-
-        <!-- Hidden tags for Mailchimp audience segmentation -->
-        <input type="hidden" name="tags" value="3570272,3570273" />
-
-        <!-- Anti-bot field (Mailchimp requirement) -->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_4bd4b67aa76e9ad8b4e01742f_3c8fd9acba" tabindex="-1" value="" />
-        </div>
-      </form>
-
-      <!-- Response messages -->
-      <div id="newsletter-message" style="margin-top: 10px;"></div>
-    </div>
-  </div>
-</section>
-
-<style>
-    /* Make the newsletter input text visible */
-    #newsletter-form input[type="email"] {
-        color: #000;       /* Black text */
-        background-color: #fff; /* White background */
-    }
-
-    /* Optional: placeholder text color */
-    #newsletter-form input[type="email"]::placeholder {
-        color: #666;       /* Dark gray placeholder */
-    }
-
-    /* Make sure the button text is visible too */
-    #newsletter-form button {
-        color: #fff;       /* White text on button */
-    }
-</style>
-
-
-<!-- Minimal JavaScript for AJAX submission -->
-<script>
-document.getElementById('newsletter-form').addEventListener('submit', async function (e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const emailInput = form.querySelector('#mce-EMAIL');
-  const messageDiv = document.getElementById('newsletter-message');
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      mode: 'no-cors', // required by Mailchimp for direct post
-      body: formData
-    });
-
-    // Clear field and show success message
-    emailInput.value = '';
-    messageDiv.textContent = '✅ Thank you for subscribing!';
-    messageDiv.style.color = 'green';
-
-  } catch (error) {
-    console.error('Mailchimp submission error:', error);
-    messageDiv.textContent = '❌ Something went wrong. Please try again.';
-    messageDiv.style.color = 'red';
-  }
-});
-</script>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -392,6 +257,7 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -427,45 +293,6 @@ document.getElementById('newsletter-form').addEventListener('submit', async func
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2348078053533" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
-        <span class="whatsapp-icon">💬</span>
-    </a>
-
     <script src="script.js"></script>
-    <script>
-        // Initialize blog page specific functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize typed text for blog page
-            if (document.getElementById('blog-typed')) {
-                new Typed('#blog-typed', {
-                    strings: ['Our Blog', 'Construction Insights', 'Industry Updates'],
-                    typeSpeed: 50,
-                    backSpeed: 30,
-                    backDelay: 2000,
-                    loop: true,
-                    showCursor: true,
-                    cursorChar: '|'
-                });
-            }
-        });
-    </script>
-</body>
-</html>     // Initialize blog page specific functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize typed text for blog page
-            if (document.getElementById('blog-typed')) {
-                new Typed('#blog-typed', {
-                    strings: ['Our Blog', 'Construction Insights', 'Industry Updates'],
-                    typeSpeed: 50,
-                    backSpeed: 30,
-                    backDelay: 2000,
-                    loop: true,
-                    showCursor: true,
-                    cursorChar: '|'
-                });
-            }
-        });
-    </script>
 </body>
 </html>
