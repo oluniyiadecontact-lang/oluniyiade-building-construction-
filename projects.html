@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Flying Flourish Construction Company</title>
+    <meta name="description" content="Explore Flying Flourish's portfolio of landmark construction projects across Nigeria, including residential, commercial, and infrastructure developments.">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/fly.jpg" alt="Flying Flourish Logo">
+                <span class="logo-text">Flying Flourish</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-hidden="true" style="display: none;">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" poster="image.jpg" style="object-fit: cover; width: 100%; height: 100%;" aria-label="Construction site background video">
+                <source src="groundvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="projects-typed" id="projects-typed"></span>
+                </h1>
+                <p class="hero-subtitle">Showcasing Excellence in Nigerian Construction</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn btn-primary">Home</a>
+                    <a href="projects.html" class="btn btn-secondary">Projects</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+    <span class="stat-number" data-count="10">0</span>
+    <span class="stat-label">Projects Completed</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number" data-count="10">0</span>
+    <span class="stat-label">Years Experience</span>
+</div>
+
+                <div class="stat-item">
+                    <span class="stat-number" data-count="98">0</span><span class="percent">%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="projects-grid" id="main-content">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Complete Portfolio</h2>
+                <p class="section-subtitle">Discover our extensive range of construction projects that demonstrate our commitment to quality, innovation, and excellence.</p>
+            </div>
+            
+            <div class="projects-grid-container">
+                <!-- Project 1 -->
+                <div class="project-card-large" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="image1.jpg" alt="Flying Flourish -  An apartment building in Lekki" loading="lazy">
+                        <div class="project-type">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>An apartment building in Lekki</h3>
+                        <p class="project-location">Lekki, Lagos</p>
+                        <p class="project-description">Luxury residential towers featuring modern amenities, premium finishes, and sustainable design principles. Completed on schedule with exceptional quality standards.</p>
+                        <div class="project-details">
+                            <span class="detail-item">2 Floors</span>
+                            <span class="detail-item">12 Units</span>
+                            <span class="detail-item">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card-large" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="img3.jpg" alt="Flying Flourish - Lekki terraced houses" loading="lazy">
+                        <div class="project-type">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Lekki terraced houses</h3>
+                        <p class="project-location">Lekki Peninsula, Lagos</p>
+                        <p class="project-description">An exclusive development featuring a row of modern bungalows with a contemporary design, each with its own compound.</p>
+                        <div class="project-details">
+                            <span class="detail-item">10 Homes</span>
+                            <span class="detail-item">18 Months</span>
+                            <span class="detail-item">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card-large" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="image5.jpg" alt="Flying Flourish - A semi-detached house in Ibadan" loading="lazy">
+                        <div class="project-type">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>A semi-detached house in Ibadan</h3>
+                        <p class="project-location">Ibadan</p>
+                        <p class="project-description">A modern duplex development featuring a contemporary design, separate two-story units, and private balconies, ideal for families seeking an affordable and private living space.</p>
+                        <div class="project-details">
+                            <span class="detail-item">2 Homes</span>
+                            <span class="detail-item">10 Months</span>
+                            <span class="detail-item">2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card-large" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="image7.jpg" alt="Flying Flourish - Foundation construction" loading="lazy">
+                        <div class="project-type">Commercial</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Foundation construction</h3>
+                        <p class="project-location">Ikeja, Lagos</p>
+                        <p class="project-description">A new residential block of flats development with multiple units, featuring modern design and located in a fast-growing urban community.</p>
+                        <div class="project-details">
+                            <span class="detail-item">Under Construction</span>
+                            <span class="detail-item">Foundation Level</span>
+                            <span class="detail-item">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card-large" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="image6.jpg" alt="Flying Flourish - A block of flats" loading="lazy">
+                        <div class="project-type">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>A block of flats</h3>
+                        <p class="project-location">Ikoyi, Lagos</p>
+                        <p class="project-description">A modern block of flats development with multiple units, featuring a contemporary design and located in a fast-growing urban community.</p>
+                        <div class="project-details">
+                            <span class="detail-item">2 Floors</span>
+                            <span class="detail-item">13 months</span>
+                            <span class="detail-item">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card-large" data-aos="fade-up" data-aos-delay="900">
+                    <div class="project-image">
+                        <img src="image3.jpg" alt="Flying Flourish - A duplex" loading="lazy">
+                        <div class="project-type">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>A duplex</h3>
+                        <p class="project-location">Banana Island, Lagos</p>
+                        <p class="project-description">A modern duplex development with two separate two-story units, featuring a contemporary design, private balconies, and an efficient use of space.</p>
+                        <div class="project-details">
+                            <span class="detail-item">2 Floors</span>
+                            <span class="detail-item">19 months</span>
+                            <span class="detail-item">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Newsletter Section -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Stay Updated with Our Projects</h2>
+      <p>Subscribe to our newsletter for the latest construction insights and project updates.</p>
+
+      <form
+        id="newsletter-form"
+        class="newsletter-form"
+        action="https://gmail.us7.list-manage.com/subscribe/post?u=4bd4b67aa76e9ad8b4e01742f&amp;id=3c8fd9acba&amp;f_id=0044afe0f0"
+        method="POST"
+        target="_self"
+        novalidate
+      >
+        <div class="form-group">
+          <input
+            type="email"
+            name="EMAIL"
+            id="mce-EMAIL"
+            placeholder="Enter your email address"
+            required
+            aria-label="Email address for newsletter subscription"
+          />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+
+        <!-- Hidden tags for Mailchimp audience segmentation -->
+        <input type="hidden" name="tags" value="3570272,3570273" />
+
+        <!-- Anti-bot field (Mailchimp requirement) -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_4bd4b67aa76e9ad8b4e01742f_3c8fd9acba" tabindex="-1" value="" />
+        </div>
+      </form>
+
+      <!-- Response messages -->
+      <div id="newsletter-message" style="margin-top: 10px;"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+    /* Make the newsletter input text visible */
+    #newsletter-form input[type="email"] {
+        color: #000;       /* Black text */
+        background-color: #fff; /* White background */
+    }
+
+    /* Optional: placeholder text color */
+    #newsletter-form input[type="email"]::placeholder {
+        color: #666;       /* Dark gray placeholder */
+    }
+
+    /* Make sure the button text is visible too */
+    #newsletter-form button {
+        color: #fff;       /* White text on button */
+    }
+</style>
+
+
+<!-- Minimal JavaScript for AJAX submission -->
+<script>
+document.getElementById('newsletter-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const emailInput = form.querySelector('#mce-EMAIL');
+  const messageDiv = document.getElementById('newsletter-message');
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      mode: 'no-cors', // required by Mailchimp for direct post
+      body: formData
+    });
+
+    // Clear field and show success message
+    emailInput.value = '';
+    messageDiv.textContent = '✅ Thank you for subscribing!';
+    messageDiv.style.color = 'green';
+
+  } catch (error) {
+    console.error('Mailchimp submission error:', error);
+    messageDiv.textContent = '❌ Something went wrong. Please try again.';
+    messageDiv.style.color = 'red';
+  }
+});
+</script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/fly.jpg" alt="Flying Flourish Logo">
+                        <span>Flying Flourish</span>
+                    </div>
+                    <p>Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <p>123 Lekki phase 1,<br>
+                        Lagos island,<br>
+                        Lagos</p>
+                        <p>
+                            <a href="tel:+2348078053533" style="color: var(--text-secondary); text-decoration: none;">+2348078053533</a>, 
+                            <a href="tel:+234703071248" style="color: var(--text-secondary); text-decoration: none;">+234703071248</a>
+                        </p>
+                        <p>
+                            <a href="mailto:info@flyingflourish.com" style="color: var(--text-secondary); text-decoration: none;">info@flyingflourish.com</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flying Flourish Construction Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348078053533" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
