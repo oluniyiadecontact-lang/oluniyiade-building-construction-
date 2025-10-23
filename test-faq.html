@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Test</title>
+    <style>
+        :root {
+            --primary-color: #018BD3;
+            --secondary-color: #37A33E;
+            --text-color: #1a1a1a;
+            --text-secondary: #A0A2A3;
+            --surface: #ffffff;
+            --border-color: rgba(1, 139, 211, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .faq-item {
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--surface);
+            transition: var(--transition);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: var(--glass-bg);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            font-weight: bold;
+        }
+        
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: grid-template-rows 0.4s ease-in-out;
+        }
+        
+        .faq-answer > * {
+            min-height: 0;
+        }
+        
+        .faq-item.active .faq-answer {
+            grid-template-rows: 1fr;
+        }
+        
+        .faq-answer-content {
+            padding: 0 20px 20px;
+            overflow: hidden;
+        }
+        
+        .faq-answer-content p {
+            margin: 0 0 16px 0;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                What types of construction projects do you handle?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" aria-hidden="true">
+                <div class="faq-answer-content">
+                    <p>We handle a wide range of construction projects including residential buildings (duplexes, bungalows, apartments), commercial properties (office buildings, shopping centers, hotels), and infrastructure development (roads, bridges, utilities) across Nigeria.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                How long does a typical construction project take?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" aria-hidden="true">
+                <div class="faq-answer-content">
+                    <p>Project timelines vary depending on scope and complexity. A standard residential bungalow typically takes 4-6 months, while larger commercial projects may take 12-18 months. We provide detailed timelines during the consultation phase.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function initFAQAccordion() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    const faqItem = this.closest('.faq-item');
+                    
+                    if (faqItem) {
+                        // Close all other FAQ items
+                        faqQuestions.forEach(otherQuestion => {
+                            if (otherQuestion !== this) {
+                                otherQuestion.setAttribute('aria-expanded', 'false');
+                                const otherFaqItem = otherQuestion.closest('.faq-item');
+                                if (otherFaqItem) {
+                                    otherFaqItem.classList.remove('active');
+                                }
+                            }
+                        });
+                        
+                        // Toggle current FAQ item
+                        this.setAttribute('aria-expanded', !isExpanded);
+                        if (isExpanded) {
+                            faqItem.classList.remove('active');
+                        } else {
+                            faqItem.classList.add('active');
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Initialize FAQ
+        document.addEventListener('DOMContentLoaded', initFAQAccordion);
+    </script>
+</body>
+</html>
