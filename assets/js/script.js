@@ -147,40 +147,6 @@ function initNavigation() {
     });
 }
 
-// Cookie Consent
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
-    
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookieConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.style.display = 'none';
-    });
-    
-    declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieConsent.style.display = 'none';
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initNewsletterForm();
-    initTypedText();
-    initScrollEffects();
-    initStatsAnimation();
-    initProjectSlider();
-    initCookieConsent();
-});
-
 // Hero Animations
 function initHeroAnimations() {
     // Typewriter effect for hero title
@@ -397,39 +363,8 @@ function initNewsletterForm() {
     });
 }
 
-// Cookie Consent
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
-    
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookieConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.style.display = 'none';
-    });
-    
-    declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieConsent.style.display = 'none';
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initNewsletterForm();
-    initTypedText();
-    initScrollEffects();
-    initStatsAnimation();
-    initProjectSlider();
-    initCookieConsent();
-});
+// Initialize after DOM loads
+document.addEventListener('DOMContentLoaded', initNewsletterForm);
 
     
     // Contact form handling with Formspree
@@ -473,40 +408,6 @@ if (contactForm) {
         });
     });
 }
-
-// Cookie Consent
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
-    
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookieConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.style.display = 'none';
-    });
-    
-    declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieConsent.style.display = 'none';
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initNewsletterForm();
-    initTypedText();
-    initScrollEffects();
-    initStatsAnimation();
-    initProjectSlider();
-    initCookieConsent();
-});
 
 // Lazy Loading for Images
 function initLazyLoading() {
@@ -584,40 +485,6 @@ function initSmoothScrolling() {
         });
     });
 }
-
-// Cookie Consent
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
-    
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookieConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.style.display = 'none';
-    });
-    
-    declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieConsent.style.display = 'none';
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initNewsletterForm();
-    initTypedText();
-    initScrollEffects();
-    initStatsAnimation();
-    initProjectSlider();
-    initCookieConsent();
-});
 
 // Intersection Observer for Performance
 function initIntersectionObserver() {
@@ -718,62 +585,24 @@ function initFAQAccordion() {
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            const faqItem = this.closest('.faq-item');
+            const answer = document.getElementById(this.getAttribute('aria-controls'));
             
-            if (faqItem) {
+            if (answer) {
                 // Close all other FAQ items
                 faqQuestions.forEach(otherQuestion => {
                     if (otherQuestion !== this) {
                         otherQuestion.setAttribute('aria-expanded', 'false');
-                        const otherFaqItem = otherQuestion.closest('.faq-item');
-                        if (otherFaqItem) {
-                            otherFaqItem.classList.remove('active');
+                        const otherAnswer = document.getElementById(otherQuestion.getAttribute('aria-controls'));
+                        if (otherAnswer) {
+                            otherAnswer.setAttribute('aria-hidden', 'true');
                         }
                     }
                 });
                 
                 // Toggle current FAQ item
                 this.setAttribute('aria-expanded', !isExpanded);
-                if (isExpanded) {
-                    faqItem.classList.remove('active');
-                } else {
-                    faqItem.classList.add('active');
-                }
+                answer.setAttribute('aria-hidden', isExpanded);
             }
         });
     });
 }
-
-// Cookie Consent
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const declineBtn = document.getElementById('decline-cookies');
-    
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookieConsent')) {
-        cookieConsent.style.display = 'block';
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.style.display = 'none';
-    });
-    
-    declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        cookieConsent.style.display = 'none';
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initFAQAccordion();
-    initNewsletterForm();
-    initTypedText();
-    initScrollEffects();
-    initStatsAnimation();
-    initProjectSlider();
-    initCookieConsent();
-});
