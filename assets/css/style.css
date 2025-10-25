@@ -466,9 +466,9 @@ body {
     font-family: var(--font-mono);
     font-size: 2.5rem;
     font-weight: 700;
-    color: #fff7cc; /* warm buttery color */
+    color: #ffffff; /* clean white */
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* soft shadow for readability */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* subtle shadow for contrast */
 }
 
 .stat-label {
@@ -476,9 +476,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.95;
-    color: #fff7cc; /* match the buttery tone */
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); /* subtle matching shadow */
+    color: #ffffff; /* match number color */
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); /* soft readability shadow */
 }
+
 
 .scroll-indicator {
     position: absolute;
