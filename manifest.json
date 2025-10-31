@@ -2,7 +2,7 @@
   "name": "Flying Flourish Construction Company",
   "short_name": "Flying Flourish",
   "description": "Nigeria's premier construction company delivering excellence in residential, commercial, and infrastructure projects.",
-  "start_url": "/oluniyiade-building-construction-/index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#018BD3",
@@ -26,7 +26,7 @@
   ],
   "related_applications": [],
   "prefer_related_applications": false,
-  "scope": "/oluniyiade-building-construction-/",
+  "scope": "/",
   "screenshots": [
     {
       "src": "assets/images/hero-bg.jpg",
