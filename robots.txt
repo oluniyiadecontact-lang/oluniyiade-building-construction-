@@ -1,20 +1,22 @@
+# Robots.txt for Fly Flourish Construction
+# Optimized for Google and other search engines
+
+# Allow all bots to crawl the main site
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://www.flyflourishconstruction.com/sitemap.xml
+# Sitemap location (matches verified domain)
+Sitemap: https://flyflourishconstruction.com/sitemap.xml
 
-# Crawl delay for bots that support it
+# Crawl delay (optional; mostly ignored by Google)
 Crawl-delay: 1
 
-# Block access to admin and private areas
+# Block access to sensitive/private directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Allow specific bots full access
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
+# Notes:
+# - All main pages (/, /about.html, /services.html, /projects.html, /contact.html, /faq.html, /blog.html, etc.) are allowed
+# - Blog detail pages and legal pages are allowed
+# - Googlebot and other major search engines will ignore crawl-delay, but it's harmless
