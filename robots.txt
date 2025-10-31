@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://oluniyiadecontact-lang.github.io/oluniyiade-building-construction-/sitemap.xml
+Sitemap: https://www.flyflourishconstruction.com/sitemap.xml
 
 # Crawl delay for bots that support it
 Crawl-delay: 1
