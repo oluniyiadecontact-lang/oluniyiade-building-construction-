@@ -1573,11 +1573,21 @@ select:focus {
     object-fit: cover;
 }
 
-/* Force hero typed text to ALWAYS stay white */
+/* === FORCE ALL HERO TEXT ON ALL PAGES TO ALWAYS BE WHITE === */
+.hero-title,
+.hero-title *,
+.hero-subtitle,
+.hero-text,
+.hero-text *,
 #typed-text,
 .typed-text,
 .typed-cursor {
     color: #ffffff !important;
 }
+
+.hero-subtitle {
+    opacity: 1 !important; /* prevent dimming */
+}
+
 
 
