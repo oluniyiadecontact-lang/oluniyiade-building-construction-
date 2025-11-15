@@ -1573,3 +1573,11 @@ select:focus {
     object-fit: cover;
 }
 
+/* Force hero typed text to ALWAYS stay white */
+#typed-text,
+.typed-text,
+.typed-cursor {
+    color: #ffffff !important;
+}
+
+
